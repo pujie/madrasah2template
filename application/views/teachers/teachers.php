@@ -493,7 +493,6 @@
     <!-- AdminLTE App -->
     <script src="<?php echo base_url();?>assets/padi/dist/js/app.min.js" type="text/javascript"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="<?php echo base_url();?>assets/padi/dist/js/demo.js" type="text/javascript"></script>
     <!-- page script -->
     <script type="text/javascript">
       $(function () {
