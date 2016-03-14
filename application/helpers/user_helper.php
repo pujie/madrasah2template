@@ -27,7 +27,14 @@
 		if($result->num_rows()>0){
 			$row = $result->result()[0];
 			if($row->password===sha1($password.$row->salt)){
-				$ci->session->set_userdata(array("user"=>$row->name,"userid"=>$row->id,"description"=>$row->description,"createdate"=>$row->createdate));
+				$ci->session->set_userdata(array(
+				"user"=>$row->name,
+				"userid"=>$row->id,
+				"email"=>$row->email,
+				"img"=>$row->img,
+				"description"=>$row->description,
+				"createdate"=>$row->createdate
+				));
 				return $row;
 			}else{
 				return false;

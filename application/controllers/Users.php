@@ -2,6 +2,10 @@
 class Users extends CI_Controller{
   function __construct(){
     parent::__construct();
+	$this->load->helper("user");
+  }
+  public function changepassword(){
+    $this->load->view("commons/changepassword");
   }
   public function index(){
     $this->load->view("users/users");

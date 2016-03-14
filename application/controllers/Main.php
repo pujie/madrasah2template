@@ -7,6 +7,17 @@ class Main extends CI_Controller{
 	function login(){
 		$this->load->view("commons/login");
 	}
+	function changepasswordhandler(){
+		$myprofile = getprofile($this->session->userdata["userid"]);
+		$email = $myprofile->email;
+		$params = $this->input->post();
+		if($params["password"]===$params["password2"]){
+			changepassword($email,$params["password"]);
+			redirect(baseurl()."main");
+		}else{
+			echo "Password tidak sama";
+		}
+	}
 	function loginhandler(){
 		$params = $this->input->post();
 		$user = checklogin($params["email"],$params["password"]);
@@ -17,7 +28,6 @@ class Main extends CI_Controller{
 			
 			redirect(baseurl()."students");
 		}
-		//redirect(baseurl()."students");
 	}
 	function logout(){
 		gologout();
@@ -38,6 +48,9 @@ class Main extends CI_Controller{
 	}
 	function test4(){
 		changepassword("pom@padi.net.id","minum");
+	}
+	function test5(){
+		$this->load->view("commons/confirm");
 	}
 	function upload(){
 		$uploaddir = './media/'; 

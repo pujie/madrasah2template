@@ -498,15 +498,10 @@
     <!-- page script -->
     <script type="text/javascript">
       $(function () {
-        $("#example1").dataTable();
-        $('#example2').dataTable({
-          "bPaginate": true,
-          "bLengthChange": false,
-          "bFilter": false,
-          "bSort": true,
-          "bInfo": true,
-          "bAutoWidth": false
-        });
+        $("#example1").dataTable({
+			"aLengthMenu": [[5, 10, 20, -1], [5, 10, 20, "All"]],
+			"iDisplayLength": 5			
+		});
       });
     </script>
 
