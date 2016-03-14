@@ -37,14 +37,17 @@
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="row">
-            <div class="col-xs-8">    
+            <div class="col-xs-4">
+              <button type="submit" name="cancelchangepassword" class="btn btn-warning btn-block btn-flat">Batalkan</button>
+            </div><!-- /.col -->
+            <div class="col-xs-4">    
               <div class="checkbox icheck">
                 <label>
                 </label>
               </div>                        
             </div><!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Simpan</button>
+              <button type="submit" name="savepassword" class="btn btn-primary btn-block btn-flat">Simpan</button>
             </div><!-- /.col -->
           </div>
         </form>
