@@ -22,6 +22,12 @@ class Main extends CI_Controller{
 			}
 		}
 	}
+	function dashboard(){
+		$this->load->view("dashboard");
+	}
+	function dashboard2(){
+		$this->load->view("dashboard2");
+	}
 	function loginhandler(){
 		$params = $this->input->post();
 		$user = checklogin($params["email"],$params["password"]);
