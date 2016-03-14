@@ -472,12 +472,7 @@
           </div><!-- /.row -->
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Versi</b> 1.0
-        </div>
-        <strong>Madrasah</a>.</strong> Sistem Informasi.
-      </footer>
+      <?php $this->load->view("commons/footer");?>
     </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.3 -->
