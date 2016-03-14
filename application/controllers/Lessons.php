@@ -4,7 +4,9 @@ class Lessons extends CI_Controller{
     parent::__construct();
   }
   public function index(){
-    $this->load->view("lessons/lessons");
+	if(islogin()){
+		$this->load->view("lessons/lessons");
+	}
   }
   public function profile(){
     $this->load->view("lessons/profile");

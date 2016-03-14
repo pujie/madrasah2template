@@ -4,7 +4,9 @@ class Periods extends CI_Controller{
     parent::__construct();
   }
   public function index(){
-    $this->load->view("periods/periods");
+	if(islogin()){
+		$this->load->view("periods/periods");
+	}
   }
   public function profile(){
     $this->load->view("periods/profile");

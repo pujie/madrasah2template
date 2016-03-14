@@ -63,4 +63,12 @@
 		$result = $ci->db->query($query);
 		return $result->result()[0];
 	}
+	function islogin(){
+		$ci = & get_instance();
+		if($ci->session->userdata["userid"]){
+			return true;
+		}else{
+			redirect(baseurl()."main/login");
+		}
+	}
 ?>

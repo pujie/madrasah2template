@@ -4,7 +4,9 @@ class Fees extends CI_Controller{
     parent::__construct();
   }
   public function index(){
-    $this->load->view("fees/fees");
+	if(islogin()){
+		$this->load->view("fees/fees");
+	}
   }
   public function profile(){
     $this->load->view("fees/fees");

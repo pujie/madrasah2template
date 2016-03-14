@@ -4,7 +4,9 @@ class Exams extends CI_Controller{
     parent::__construct();
   }
   public function index(){
-    $this->load->view("exams/exams");
+	if(islogin()){
+		$this->load->view("exams/exams");
+	}    
   }
   public function profile(){
     $this->load->view("exams/profile");

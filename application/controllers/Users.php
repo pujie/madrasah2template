@@ -8,7 +8,9 @@ class Users extends CI_Controller{
     $this->load->view("commons/changepassword");
   }
   public function index(){
-    $this->load->view("users/users");
+	if(islogin()){
+		$this->load->view("users/users");
+	}
   }
   public function profile(){
     $this->load->view("users/profile");

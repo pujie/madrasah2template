@@ -11,11 +11,15 @@ class Main extends CI_Controller{
 		$myprofile = getprofile($this->session->userdata["userid"]);
 		$email = $myprofile->email;
 		$params = $this->input->post();
-		if($params["password"]===$params["password2"]){
-			changepassword($email,$params["password"]);
+		if($params["cancelchangepassword"]){
 			redirect(baseurl()."main");
 		}else{
-			echo "Password tidak sama";
+			if($params["password"]===$params["password2"]){
+				changepassword($email,$params["password"]);
+				redirect(baseurl()."main");
+			}else{
+				echo "Password tidak sama";
+			}
 		}
 	}
 	function loginhandler(){
